@@ -1,6 +1,15 @@
-### Projeto de Agendamento de Pet 🐶🐱
+# Projeto de Agendamento de Pet 🐶🐱
 
 Este projeto é um sistema de agendamento de serviços para pets de banho e tosa, utilizando React no frontend e Express no backend.
+
+**Integrantes do Grupo 03**
+- Caique Dos Santos Filgueiras
+- Daniel Soares
+- José Teodoro De Araújo
+- Larissa Lima Barreis
+- Mariana De Carvalho Fernandes
+- Priscila Ramonna da Silva Pires
+
 
 ## 📌Descrição
 
