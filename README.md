@@ -2,11 +2,11 @@
 
 Este projeto é um sistema de agendamento de serviços para pets de banho e tosa, utilizando React no frontend e Express no backend.
 
-📌 Descrição
+## 📌Descrição
 
 O sistema permite que os donos de pets agendem serviços para seus animais de estimação. Ele conta com um formulário no frontend onde o usuário insere informações como nome do pet, tipo de serviço e outros detalhes. Essas informações são enviadas para o backend, que gerencia e armazena os agendamentos.
 
-🚀 Funcionalidades
+## 🚀 Funcionalidades
 
 📅 Cadastro de agendamentos para serviços de pets (banho, tosa, etc.).
 
@@ -16,7 +16,7 @@ O sistema permite que os donos de pets agendem serviços para seus animais de es
 
 🛠️ Tecnologias Utilizadas
 
-#**Frontend:**
+## Frontend:
 
 ⚛️ React – Biblioteca Typescript para construção de interfaces de usuário.
 
@@ -24,7 +24,7 @@ O sistema permite que os donos de pets agendem serviços para seus animais de es
 
 🔤 Lucide React – Conjunto de ícones para React.
 
-#**Backend:**
+## Backend:
 
 🟢 Node.js – Ambiente de execução para JavaScript no backend.
 
@@ -45,7 +45,7 @@ Node.js (versão 18 ou superior).
 NPM (gerenciador de pacotes).
 
 
-##Rodando o Frontend
+## Rodando o Frontend
 
 Navegue até a pasta do frontend:
 
@@ -59,7 +59,7 @@ npm run dev
 
 Local: http://localhost:5173/
 
-##Rodando o Backend
+## Rodando o Backend
 
 Navegue até a pasta do backend no terminal:
 
@@ -73,7 +73,7 @@ npm start
 O backend estará rodando na porta 5000 por padrão. Você pode acessar as rotas da API em http://localhost:5000.
 
 
-🌐 Endpoints da API
+## 🌐 Endpoints da API
 
 Se estiver utilizando o Insomnia ou Postman, aqui estão os endpoints disponíveis:
 
