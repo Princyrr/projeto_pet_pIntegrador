@@ -42,43 +42,23 @@ O sistema permite que os donos de pets agendem serviços para seus animais de es
 
 📦 Body-Parser – Middleware para analisar o corpo das requisições HTTP.
 
-📌 Como Rodar o Projeto
+## 📌 Como Rodar o Projeto: Rodando o Frontend
 
-Pré-requisitos
+**Pré-requisitos**
 
-Antes de rodar o projeto, certifique-se de ter instalado:
+- instalar o npm:  npm install
+- depois de intalado: npm run dev
 
-Node.js (versão 18 ou superior).
+  Vai abrir o projeto em: Local:   http://localhost:5173/
 
-NPM (gerenciador de pacotes).
-
-
-## Rodando o Frontend
-
-Navegue até a pasta do frontend:
-
-cd frontend
-Instale as dependências:
-
-npm install
-Inicie o servidor de desenvolvimento:
-
-npm run dev
-
-Local: http://localhost:5173/
 
 ## Rodando o Backend
+Abra outro terminal:
 
-Navegue até a pasta do backend no terminal:
-
-cd backend
-Instale as dependências:
-
-npm install
-Inicie o servidor:
-
-npm start
-O backend estará rodando na porta 5000 por padrão. Você pode acessar as rotas da API em http://localhost:5000.
+ - digitar no terminal: node server.js
+   
+O backend estará rodando na porta 5000 por padrão.
+Você pode acessar as rotas da API em http://localhost:5000.
 
 
 ## 🌐 Endpoints da API
