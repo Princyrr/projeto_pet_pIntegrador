@@ -23,7 +23,6 @@ O sistema permite que os donos de pets agendem serviços para seus animais de es
 
 ❌ Exclusão de agendamentos.
 
-🛠️ Tecnologias Utilizadas
 
 ## Frontend:
 
