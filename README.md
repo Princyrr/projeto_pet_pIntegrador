@@ -1,4 +1,4 @@
-Projeto de Agendamento de Pet 🐶🐱
+###Projeto de Agendamento de Pet 🐶🐱
 
 Este projeto é um sistema de agendamento de serviços para pets de banho e tosa, utilizando React no frontend e Express no backend.
 
@@ -16,7 +16,7 @@ O sistema permite que os donos de pets agendem serviços para seus animais de es
 
 🛠️ Tecnologias Utilizadas
 
-Frontend:
+#**Frontend:**
 
 ⚛️ React – Biblioteca Typescript para construção de interfaces de usuário.
 
@@ -24,7 +24,7 @@ Frontend:
 
 🔤 Lucide React – Conjunto de ícones para React.
 
-Backend:
+#**Backend:**
 
 🟢 Node.js – Ambiente de execução para JavaScript no backend.
 
@@ -44,20 +44,8 @@ Node.js (versão 18 ou superior).
 
 NPM (gerenciador de pacotes).
 
-Rodando o Backend
 
-Navegue até a pasta do backend no terminal:
-
-cd backend
-Instale as dependências:
-
-npm install
-Inicie o servidor:
-
-npm start
-O backend estará rodando na porta 5000 por padrão. Você pode acessar as rotas da API em http://localhost:5000.
-
-Rodando o Frontend
+##Rodando o Frontend
 
 Navegue até a pasta do frontend:
 
@@ -70,6 +58,20 @@ Inicie o servidor de desenvolvimento:
 npm run dev
 
 Local: http://localhost:5173/
+
+##Rodando o Backend
+
+Navegue até a pasta do backend no terminal:
+
+cd backend
+Instale as dependências:
+
+npm install
+Inicie o servidor:
+
+npm start
+O backend estará rodando na porta 5000 por padrão. Você pode acessar as rotas da API em http://localhost:5000.
+
 
 🌐 Endpoints da API
 
