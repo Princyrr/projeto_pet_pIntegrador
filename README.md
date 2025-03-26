@@ -13,7 +13,7 @@ Este projeto é um sistema de agendamento de serviços para pets de banho e tosa
 
 ## 📌Descrição
 
-O sistema permite que os donos de pets agendem serviços para seus animais de estimação. Ele conta com um formulário no frontend onde o usuário insere informações como nome do pet, tipo de serviço e outros detalhes. Essas informações são enviadas para o backend, que gerencia e armazena os agendamentos.
+O sistema permite que os donos de pets agendem serviços para seus animais de estimação. Ele conta com um formulário no frontend onde o usuário insere informações como nome do pet, tipo de serviço e outros detalhes. Essas informações são enviadas para o backend, que gerencia e armazena os agendamentos. O sistema também está integrado com o MongoDB Atlas, permitindo que os agendamentos sejam armazenados e acessados remotamente.
 
 ## 🚀 Funcionalidades
 
@@ -41,6 +41,8 @@ O sistema permite que os donos de pets agendem serviços para seus animais de es
 🔗 CORS – Middleware para permitir requisições de diferentes origens.
 
 📦 Body-Parser – Middleware para analisar o corpo das requisições HTTP.
+
+🌐 MongoDB Atlas – Banco de dados remoto para armazenar os agendamentos.
 
 ## 📌 Como Rodar o Projeto: Rodando o Frontend
 
