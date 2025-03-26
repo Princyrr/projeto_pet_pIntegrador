@@ -1,6 +1,8 @@
+// src/server.js
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
+import { mongoose, Appointment } from './db.js'; // Importação corrigida
 
 const app = express();
 
@@ -8,75 +10,80 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-// Armazenamento em memória (para não usar banco de dados)
-let appointments = [];
-let currentId = 1;
-
 // Rota para pegar todos os agendamentos (GET)
-app.get('/appointments', (req, res) => {
-  console.log('GET /appointments', appointments);
-  res.json(appointments);
+app.get('/appointments', async (req, res) => {
+  try {
+    const appointments = await Appointment.find();
+    console.log('GET /appointments', appointments);
+    res.json(appointments);
+  } catch (err) {
+    console.log('Erro ao buscar agendamentos:', err);
+    res.status(500).json({ error: 'Erro ao buscar agendamentos' });
+  }
 });
 
 // Rota para adicionar um novo agendamento (POST)
-app.post('/appointments', (req, res) => {
+app.post('/appointments', async (req, res) => {
+  console.log('Recebendo dados:', req.body); // Log para depuração
   const newAppointment = req.body;
   
-  // Verificação se os dados obrigatórios estão presentes
   if (!newAppointment.ownerName || !newAppointment.petName || !newAppointment.date || !newAppointment.time || !newAppointment.service) {
     return res.status(400).json({ error: 'Dados obrigatórios estão faltando' });
   }
 
-  // Adiciona o id ao novo agendamento
-  const appointmentWithId = { ...newAppointment, id: currentId++ };
-  appointments.push(appointmentWithId);
-
-  // Confirmação e resposta com o agendamento, incluindo o id
-  console.log('POST /appointments', appointmentWithId);
-  res.status(201).json(appointmentWithId);
+  try {
+    const appointment = new Appointment(newAppointment);
+    await appointment.save();
+    console.log('Salvo no MongoDB:', appointment); // Log para depuração
+    res.status(201).json(appointment);
+  } catch (err) {
+    console.log('Erro ao adicionar agendamento:', err);
+    res.status(500).json({ error: 'Erro ao adicionar agendamento' });
+  }
 });
 
 // Rota para atualizar o agendamento (PUT)
-app.put('/appointments/:id', (req, res) => {
+app.put('/appointments/:id', async (req, res) => {
   const { id } = req.params;
   const updatedData = req.body;
 
-  const appointmentIndex = appointments.findIndex(appointment => appointment.id == id);
-
-  if (appointmentIndex === -1) {
-    return res.status(404).json({ error: 'Agendamento não encontrado' });
+  try {
+    const updatedAppointment = await Appointment.findByIdAndUpdate(id, updatedData, { new: true });
+    if (!updatedAppointment) {
+      return res.status(404).json({ error: 'Agendamento não encontrado' });
+    }
+    console.log('PUT /appointments/' + id, updatedAppointment);
+    res.json(updatedAppointment);
+  } catch (err) {
+    console.log('Erro ao atualizar agendamento:', err);
+    res.status(500).json({ error: 'Erro ao atualizar agendamento' });
   }
-
-  // Atualiza o agendamento
-  appointments[appointmentIndex] = { ...appointments[appointmentIndex], ...updatedData };
-  const updatedAppointment = appointments[appointmentIndex];
-
-  console.log('PUT /appointments/' + id, updatedAppointment);
-  res.json(updatedAppointment);
 });
 
 // Rota para excluir um agendamento (DELETE)
-app.delete('/appointments/:id', (req, res) => {
+app.delete('/appointments/:id', async (req, res) => {
   const { id } = req.params;
-  const appointmentIndex = appointments.findIndex(appointment => appointment.id == id);
 
-  if (appointmentIndex === -1) {
-    return res.status(404).json({ error: 'Agendamento não encontrado' });
+  try {
+    const deletedAppointment = await Appointment.findByIdAndDelete(id);
+    if (!deletedAppointment) {
+      return res.status(404).json({ error: 'Agendamento não encontrado' });
+    }
+    console.log('DELETE /appointments/' + id, deletedAppointment);
+    res.json({ message: 'Agendamento excluído com sucesso' });
+  } catch (err) {
+    console.log('Erro ao excluir agendamento:', err);
+    res.status(500).json({ error: 'Erro ao excluir agendamento' });
   }
-
-  // Exclui o agendamento
-  const deletedAppointment = appointments.splice(appointmentIndex, 1);
-
-  console.log('DELETE /appointments/' + id, deletedAppointment);
-  res.json({ message: 'Agendamento excluído com sucesso' });
 });
 
-// Tratamento de rota 404 (não encontrada)
+// Tratamento de rota 404
 app.use((req, res) => {
   res.status(404).json({ error: 'Rota não encontrada' });
 });
 
 // Inicia o servidor
-app.listen(5000, () => {
-  console.log('Servidor rodando na porta 5000');
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Servidor rodando na porta ${PORT}`);
 });
