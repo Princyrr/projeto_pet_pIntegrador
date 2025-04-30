@@ -74,3 +74,14 @@ POST /appointments: Adiciona um novo agendamento.
 PUT /appointments/:id: Edita um agendamento pelo ID.
 
 DELETE /appointments/:id: Exclui um agendamento pelo ID.
+
+
+## Telas ##
+
+![Tela Principal](src/img/telaprincipal.png)
+
+![Tela de Agendamento](src/img/telaagendamento.png)
+
+![Meus Agendamentos](src/img/meusagendamentos.png)
+
+
