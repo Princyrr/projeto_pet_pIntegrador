@@ -75,12 +75,21 @@ PUT /appointments/:id: Edita um agendamento pelo ID.
 
 DELETE /appointments/:id: Exclui um agendamento pelo ID.
 
+## Nosso Site ##
+🌐 [Acesse o site](https://Princyrr.github.io/projeto_pet_pIntegrador)
+
+
 
 ## Telas ##
+* Tela principal 
 
 ![Tela Principal](src/img/telaprincipal.png)
 
+* Tela de Agendamento
+
 ![Tela de Agendamento](src/img/telaagendamento.png)
+
+* Meus Agendamentos
 
 ![Meus Agendamentos](src/img/meusagendamentos.png)
 
