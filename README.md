@@ -3,6 +3,7 @@
 Este projeto é um sistema de agendamento de serviços para pets de banho e tosa, utilizando React no frontend e Express no backend.
 
 **Integrantes do Grupo 03**
+
 - Caique Dos Santos Filgueiras
 - Daniel Soares
 - José Teodoro De Araújo
@@ -59,6 +60,7 @@ O sistema permite que os donos de pets agendem serviços para seus animais de es
 
 
 ## Rodando o Backend
+
 Abra outro terminal:
 
  - digitar no terminal: node server.js
@@ -80,11 +82,13 @@ PUT /appointments/:id: Edita um agendamento pelo ID.
 DELETE /appointments/:id: Exclui um agendamento pelo ID.
 
 ## Nosso Site ##
+
 🌐 [Acesse o site](https://Princyrr.github.io/projeto_pet_pIntegrador)
 
 
 
 ## Telas ##
+
 * Tela principal 
 
 ![Tela Principal](src/img/telaprincipal.png)
