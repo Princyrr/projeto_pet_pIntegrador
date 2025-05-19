@@ -1,0 +1,50 @@
+Documentação do Projeto PetStyle
+
+Equipe de Desenvolvimento:
+Este projeto foi desenvolvido pelo Grupo 03, composto por:
+• Caique Dos Santos Filgueiras
+• Daniel Soares
+• José Teodoro De Araújo
+• Larissa Lima Barreis
+• Mariana De Carvalho Fernandes
+• Priscila Ramonna da Silva Pires
+
+1. Introdução
+O PetStyle é um sistema de agendamento de serviços para pets, focado em banho e tosa. O projeto utiliza React no frontend e Express no backend, garantindo uma experiência rápida e intuitiva para os usuários. O armazenamento dos agendamentos é realizado no MongoDB Atlas, permitindo acesso remoto seguro.
+3. Descrição do Projeto
+O sistema permite que os donos de pets agendem serviços como banho e tosa diretamente pelo site. As informações inseridas pelo usuário são enviadas para o backend, que gerencia os registros e exibe os agendamentos de forma organizada. O projeto segue uma arquitetura baseada em React para o frontend e Node.js + Express para o backend, garantindo agilidade e escalabilidade.
+4. Funcionalidades
+✔ Cadastro de Agendamentos: O usuário pode adicionar um serviço para seu pet informando nome, tipo de serviço e demais detalhes.
+✔ Visualização de Agendamentos: Permite consultar e gerenciar os agendamentos realizados.
+✔ Exclusão de Agendamentos: Caso necessário, o usuário pode excluir um registro diretamente pela interface.
+5. Tecnologias Utilizadas
+Frontend:
+• ⚛️ React – Biblioteca para construção de interfaces de usuário.
+• 🎨 Tailwind CSS – Framework para estilização rápida e responsiva.
+• 🔤 Lucide React – Conjunto de ícones para interface intuitiva.
+Backend:
+• 🟢 Node.js – Ambiente de execução JavaScript no backend.
+• 🚀 Express – Framework para criação de servidores e APIs REST.
+• 🔗 CORS – Middleware para permitir requisições de diferentes origens.
+• 📦 Body-Parser – Middleware para interpretar dados JSON enviados pelo frontend.
+• 🌐 MongoDB Atlas – Banco de dados remoto para armazenar os registros de agendamento.
+6. Como Executar o Projeto
+Rodando o Frontend
+Pré-requisitos: Ter o npm instalado
+Passos:
+1. Instalar dependências: npm install
+2. Iniciar o servidor: npm run dev
+🔗 O projeto será iniciado localmente em: http://localhost:5173/
+Rodando o Backend
+1. Abrir um novo terminal
+2. Iniciar o servidor: node server.js
+🌐 O backend estará rodando na porta 5000 por padrão. Você pode acessar as rotas da API em http://localhost:5000.
+7. Endpoints da API
+🔎 Listar Agendamentos: GET /appointments
+➕ Criar um Novo Agendamento: POST /appointments
+✏️ Editar um Agendamento (por ID): PUT /appointments/:id
+🗑️ Excluir um Agendamento (por ID): DELETE /appointments/:id
+8. Nosso Site
+🔗 Caso disponível, os usuários podem acessar o sistema diretamente pelo nosso site!
+9. Conclusão
+O PetStyle é um sistema de agendamento eficiente para serviços de banho e tosa, permitindo que donos de pets organizem suas demandas de forma prática. A aplicação é desenvolvida com tecnologias modernas e de fácil manutenção, garantindo uma experiência fluida.
