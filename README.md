@@ -22,7 +22,7 @@ O sistema permite que os donos de pets agendem serviços para seus animais de es
 
 ## 🚀 Funcionalidades
 
-📅 Cadastro de agendamentos para serviços de pets (banho, tosa, etc.).
+📅 Cadastro de agendamentos para serviços de pets (banho, tosa, etc).
 
 👀 Visualização dos agendamentos feitos.
 
