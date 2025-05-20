@@ -101,4 +101,10 @@ DELETE /appointments/:id: Exclui um agendamento pelo ID.
 
 ![Meus Agendamentos](src/img/meusagendamentos.png)
 
+## Documentção PetStyle ##
+
+* Documentção
+
+![Documentação-PetStyle](src/Documentação.txt)
+
 
